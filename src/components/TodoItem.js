@@ -10,7 +10,9 @@ export class TodoItem extends Component {
   };
 
   render() {
+    // Save props for easier access
     const { id, title } = this.props.todo;
+
     return (
       <div className="input-group mb-3">
         <div className="input-group-prepend">
@@ -23,6 +25,7 @@ export class TodoItem extends Component {
             />
           </div>
         </div>
+        {/* Display the todo in an input form because Bootstrap ¯\_(ツ)_/¯ */}
         <input
           type="text"
           className="form-control todo-text"

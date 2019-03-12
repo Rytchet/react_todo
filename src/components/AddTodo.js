@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 
 export class AddTodo extends Component {
+  // By default the title is empty
   state = {
     title: ""
   };
 
   onChange = e => {
+    // On every change set the title in the state to have the input value.
+    // Using "[e.target.name]" makes the code reusable for any input
     this.setState({ [e.target.name]: e.target.value });
   };
 

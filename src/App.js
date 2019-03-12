@@ -14,6 +14,7 @@ class App extends Component {
     todos: []
   };
 
+  // This function runs immidiately after the App component is mounted
   componentDidMount() {
     axios
       .get("https://jsonplaceholder.typicode.com/todos?_limit=10")
@@ -54,7 +55,7 @@ class App extends Component {
           <Route
             exact
             path="/"
-            render={props => (
+            render={() => (
               <React.Fragment>
                 <AddTodo addTodo={this.addTodo} />
                 <Todos
