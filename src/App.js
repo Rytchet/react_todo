@@ -77,7 +77,13 @@ class App extends Component {
               <React.Fragment>
                 <AddTodo addTodo={this.addTodo} />
                 <Todos
-                  todos={this.state.todos}
+                  todos={this.state.todos.filter(todo => !todo.completed)}
+                  toggleComplete={this.toggleComplete}
+                  delTodo={this.delTodo}
+                />
+                <hr />
+                <Todos
+                  todos={this.state.todos.filter(todo => todo.completed)}
                   toggleComplete={this.toggleComplete}
                   delTodo={this.delTodo}
                 />

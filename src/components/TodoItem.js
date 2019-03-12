@@ -3,10 +3,8 @@ import PropTypes from "prop-types";
 
 export class TodoItem extends Component {
   getStyle = () => {
-    return {
-      textDecoration: this.props.todo.completed ? "line-through" : "none",
-      backgroundColor: "white"
-    };
+    // White background for normal, default bootstrap grey for completed
+    return { backgroundColor: this.props.todo.completed ? "" : "white" };
   };
 
   render() {
@@ -28,7 +26,7 @@ export class TodoItem extends Component {
         {/* Display the todo in an input form because Bootstrap ¯\_(ツ)_/¯ */}
         <input
           type="text"
-          className="form-control todo-text"
+          className="form-control"
           value={title}
           style={this.getStyle()}
           disabled
