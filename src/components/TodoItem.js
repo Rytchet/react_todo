@@ -4,27 +4,41 @@ import PropTypes from "prop-types";
 export class TodoItem extends Component {
   getStyle = () => {
     return {
-      textDecoration: this.props.todo.completed ? "line-through" : "none"
+      textDecoration: this.props.todo.completed ? "line-through" : "none",
+      backgroundColor: "white"
     };
   };
 
   render() {
     const { id, title } = this.props.todo;
     return (
-      <li className="list-group-item d-flex justify-content-between align-items-center">
+      <div className="input-group mb-3">
+        <div className="input-group-prepend">
+          <div className="input-group-text">
+            <input
+              type="checkbox"
+              aria-label="Checkbox for toggling complete"
+              onChange={this.props.toggleComplete.bind(this, id)}
+            />
+          </div>
+        </div>
         <input
-          className="form-check-input"
-          type="checkbox"
-          onChange={this.props.toggleComplete.bind(this, id)}
+          type="text"
+          className="form-control todo-text"
+          value={title}
+          style={this.getStyle()}
+          disabled
         />
-        <div style={this.getStyle()}>{title}</div>
-        <button
-          onClick={this.props.delTodo.bind(this, id)}
-          className="btn btn-danger"
-        >
-          Delete
-        </button>
-      </li>
+        <div className="input-group-append">
+          <button
+            className="btn btn-outline-danger"
+            type="button"
+            onClick={this.props.delTodo.bind(this, id)}
+          >
+            Delete
+          </button>
+        </div>
+      </div>
     );
   }
 }

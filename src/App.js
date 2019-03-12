@@ -16,7 +16,7 @@ class App extends Component {
       {
         id: 2,
         title: "Dinner",
-        completed: true
+        completed: false
       },
       {
         id: 3,
@@ -45,16 +45,14 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App container">
         <Header />
-        <ul className="list-group">
-          <Todos
-            todos={this.state.todos}
-            toggleComplete={this.toggleComplete}
-            delTodo={this.delTodo}
-          />
-          <AddTodo />
-        </ul>
+        <Todos
+          todos={this.state.todos}
+          toggleComplete={this.toggleComplete}
+          delTodo={this.delTodo}
+        />
+        <AddTodo />
       </div>
     );
   }
