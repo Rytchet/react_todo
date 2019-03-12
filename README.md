@@ -10,10 +10,11 @@ Changes don't save after reloading because it's a serverless frontend demo
 
 ## Features
 
-* Adding / Deleting todos
-* Toggling them as complete / uncomplete
-* An 'About' page using react-router-dom
-* Getting todos from a web API (https://jsonplaceholder.typicode.com/)
+- Adding / Deleting todos
+- Toggling them as complete / uncomplete
+- An 'About' page using react-router-dom
+- Getting todos from a web API (https://jsonplaceholder.typicode.com/)
+- Sending Put / Delete requests to the web API
 
 ## Running
 
