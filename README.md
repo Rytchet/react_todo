@@ -15,6 +15,7 @@ Changes don't save after reloading because it's a serverless frontend demo
 - An 'About' page using react-router-dom
 - Getting todos from a web API (https://jsonplaceholder.typicode.com/)
 - Sending Put / Delete requests to the web API
+- Use UUID's for all the todos to fix responses from the fake API
 
 ## Running
 
