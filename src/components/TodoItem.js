@@ -18,6 +18,7 @@ export class TodoItem extends Component {
             <input
               type="checkbox"
               aria-label="Checkbox for toggling complete"
+              defaultChecked={this.props.todo.completed}
               onChange={this.props.toggleComplete.bind(this, id)}
             />
           </div>
