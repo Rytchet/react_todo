@@ -1,7 +1,13 @@
 # Todo
 
-Todo list app created using React
+A simple Todo list app demo created using React
 
-Source: https://www.youtube.com/watch?v=sBws8MSXN7A
+![](https://i.imgur.com/zFSur4o.png)
 
-Last finished at 1:03:00
+It uses Axios to automatically get the Todos from an API
+
+Changes don't save after reloading because it's a serverless frontend demo
+
+## Running
+
+Run `npm install` to install dependencies and `npm start` to run the page
