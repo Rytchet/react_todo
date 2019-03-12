@@ -2,7 +2,7 @@
 
 A simple Todo list app demo created using React
 
-![](https://i.imgur.com/yZNFQ7C.png)
+![](https://i.imgur.com/FNX8zHl.png)
 
 It uses Axios to automatically get the Todos from an API
 
