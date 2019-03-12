@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import AddTodo from "./components/AddTodo";
 import Todos from "./components/Todos";
+import Header from "./components/layout/Header";
 
 import "./App.css";
 
@@ -43,13 +45,17 @@ class App extends Component {
 
   render() {
     return (
-      <ul className="list-group">
-        <Todos
-          todos={this.state.todos}
-          toggleComplete={this.toggleComplete}
-          delTodo={this.delTodo}
-        />
-      </ul>
+      <div className="App">
+        <Header />
+        <ul className="list-group">
+          <Todos
+            todos={this.state.todos}
+            toggleComplete={this.toggleComplete}
+            delTodo={this.delTodo}
+          />
+          <AddTodo />
+        </ul>
+      </div>
     );
   }
 }
