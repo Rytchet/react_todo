@@ -9,7 +9,7 @@ export default function About() {
         todos automatically from an API using Axios.
       </p>
       <p>
-        The changes don't save after realoading the page because it's only a
+        The changes don't save after reloading the page because it's only a
         frontend demo
       </p>
     </React.Fragment>
